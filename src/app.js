@@ -19,6 +19,11 @@ global.logger = winston.createLogger({
 const app = express();
 
 app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send({ result: 'app funfando' });
+});
+
 app.listen(3000, async () => {
   //só pra ver o que muda
   logger.info('App inicializado');
