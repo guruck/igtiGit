@@ -20,5 +20,6 @@ const app = express();
 
 app.use(express.json());
 app.listen(3000, async () => {
+  //só pra ver o que muda
   logger.info('App inicializado');
 });
