@@ -24,7 +24,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send({ result: 'app funfando' });
+  res.send({ result: 'app funfando é nois' });
 });
 
 app.listen(PORT || 3000, async () => {
