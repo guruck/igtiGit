@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
 dotenv.config();
-const { USERDB, PSWDDB, SITEDB, BASEDB, PRMTDB, APPPORT } = process.env;
+// const { USERDB, PSWDDB, SITEDB, BASEDB, PRMTDB, APPPORT } = process.env;
 const { combine, timestamp, label, printf } = winston.format;
 const myFormat = printf(({ level, message, label, timestamp }) => {
   return `${timestamp} [${label}] ${level}: ${message}`;
@@ -27,19 +27,19 @@ app.get('/', (req, res) => {
   res.send({ result: 'app funfando' });
 });
 
-app.listen(APPPORT, async () => {
+app.listen(3000, async () => {
   logger.info(`,  `);
-  try {
-    await mongoose.connect(
-      `mongodb+srv://${USERDB}:${PSWDDB}@${SITEDB}/${BASEDB}?${PRMTDB}`,
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      }
-    );
-    logger.info('conectado com sucesso');
-  } catch (err) {
-    logger.error('não conectado ERRO:' + err);
-  }
+  // try {
+  //   await mongoose.connect(
+  //     `mongodb+srv://${USERDB}:${PSWDDB}@${SITEDB}/${BASEDB}?${PRMTDB}`,
+  //     {
+  //       useNewUrlParser: true,
+  //       useUnifiedTopology: true,
+  //     }
+  //   );
+  //   logger.info('conectado com sucesso');
+  // } catch (err) {
+  //   logger.error('não conectado ERRO:' + err);
+  // }
   logger.info('App inicializado');
 });
