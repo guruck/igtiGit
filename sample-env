@@ -1,0 +1,6 @@
+USERDB=(usuario)
+PSWDDB=(senha)
+BASEDB=(database)
+SITEDB=(url)
+PRMTDB=(parametros)
+APPPORT=(porta da aplicacao)
