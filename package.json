@@ -1,6 +1,6 @@
 {
   "name": "appgitteste",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "teste de versao",
   "main": "src/app.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "dependencies": {
     "dotenv": "8.2.0",
     "express": "4.17.1",
-    "mongoose": ">=5.11.15",
+    "mongoose": ">=6.6.1",
     "winston": "3.3.3"
   },
   "type": "module"
